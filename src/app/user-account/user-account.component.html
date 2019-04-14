@@ -1,0 +1,16 @@
+
+<section>
+  <div class="user">
+      <h1>S'identifier</h1>
+      <form>
+        <fieldset>
+          <input type="email" id="email" name="email" placeholder="Email " (change)="check($event);">
+          <input type="password" id="password" name="password" placeholder="Mot de passe" (change)="check2($event);">
+          <div id="warning"></div>
+          <button (click)="submit()">Connexion</button>
+        </fieldset>
+        <p>En cliquant sur le bouton S'inscrire, vous acceptez notre <a href="#">Terme &amp; Conditions</a>, & <a href="#">Politique de confidentialité</a>.</p>
+      </form>
+  </div>
+</section>
+ 
