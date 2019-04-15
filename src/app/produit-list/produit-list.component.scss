@@ -7,6 +7,7 @@
 .shadow {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
     background-color: #4183d7;
+    font-family: 'hdoicons' !important;
 }
 
 .welcome {
@@ -37,13 +38,12 @@
     display: flex;
     background-color: #fff;
     color: white;
-    margin-top: 7px;
+    /* margin-top: 5px; */
     font-size: 16px;
-    /* flex-wrap: wrap; */
     border: 1px solid #4183d8;
-    /* margin: 68px 29px 0; */
-    box-shadow: 15px 25px 14px #f6f6f6;
-    padding: -3rem;
+    box-shadow: 20px 40px 20px #f6f6f6;
+    padding: 2px 0px -1px;
+    margin: 52px 8px -47px;
 }
 
 .cursor {
