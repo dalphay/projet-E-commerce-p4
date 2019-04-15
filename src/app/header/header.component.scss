@@ -21,34 +21,34 @@
 }
 
 .searchinger {
-    background: none repeat scroll 0 0 transparent;
-    border: 0 none;
-    font-family: 'Oswald', sans-serif;
-    font-size: 16px;
-    height: 34px;
-    padding: 0 0 0 10px;
-    position: absolute;
-    width: 0px;
-  
-  -webkit-transition: all .5s;
-	-moz-transition: all .5s;
-	transition: all .5s;
+  background: none repeat scroll 0 0 transparent;
+  border: 0 none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  height: 34px;
+  padding: 0 0 0 10px;
+  position: absolute;
+  width: 0px;
+  transition: all .5s;
+  margin-left: -628px;
+  margin-top: -34px;
 }
 
 #butt-on {
-    border-radius: 0;
-    border: 0 none;
-    height: 34px;
-    padding: 0;
-    margin-left: -100px;
-    margin-top: 5px;
-    width: 34px;
+  border-radius: 0;
+  border: 0 none;
+  height: 34px;
+  padding: 0;
+  margin-left: -664px;
+  margin-top: 12px;
+  width: 34px;
 }
 
 #butt-on:focus ~ .searchinger {
   width: 200px;
-  background: #bbb;
+  background: #fff;
   cursor: auto;
+  font-family: 'hdoicons' !important;
 }
 
 .searchinger:focus {
@@ -93,26 +93,27 @@
   margin-right: 25px;
 }
 
+
 .logo {
-  position: relative;
-  border-radius: 7px, solid;
-  background-color: #4267b2;
-  font-weight: bold;
-  font-size: 35px;
-  font-style: italic;
-  // width: 50px;#c10a27;
-  height: 42px;
-  margin-right: 233px;
-  top: -13px;
+  font-family: 'hdoicons' !important;
+    speak: none;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
 }
 
 .slogan{
   position: relative;
   color: #fffdfd;
-  top: -41px;
-  font-size: 14px;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  top: -21px;
+  margin-left: 51px;
+  font-size: 17px;
+  font-family: 'hdoicons' !important;
+  
 }
 
 .fa, fa-cart-arrow-down, fa-1x {
@@ -122,10 +123,12 @@
 
 // @import "compass/css3";
 
+
+
 .navigation {
   list-style: none;
   margin: 0;
-  height: 63px;
+  height: 80px;
   background: #4267b2;
   display: -webkit-box;
   display: -moz-box;
@@ -175,6 +178,60 @@
 
   
   .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+/**bare navigation header*/
+.icon-header{
+  position: relative;
+  float: right;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  margin-top: -61px;
+  font-family: 'hdoicons' !important;
+}
+
+.icon-header a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.icon-header a:hover {
+  background: darken(#d9534f, 2%);
+}
+
+@media (min-width: 1000px){
+  .container {
+      max-width: 1000px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .icon-header {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .icon-header {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .icon-headern a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .icon-header li:last-of-type a {
     border-bottom: none;
   }
 }

@@ -10,8 +10,10 @@
         <a class="btn btn-danger" id="butt-on" href="#">
           <i class="fa fa-search fa-lg" id="search-icon"></i>
         </a>
-        <input class='searchinger' type='search' placeholder='search'/>
+        <input class='searchinger' type='search' placeholder='votre recherche'/>
       </li>
+    </ul>
+    <ul class="icon-header" >
       <li>
         <a routerLink="">
           <i class="fa fa-home fa-1x ml-3 d-block"></i>
@@ -19,7 +21,9 @@
         </a>
       </li>                     
       <li>
-        <a routerLink="/panier"><i class="fa fa-shopping-cart fa-1x ml-5 d-block"></i>
+        <a routerLink="/panier">
+          <i class="fa fa-shopping-cart fa-1x ml-5 d-block"></i>
+          <!--<i class="fas fa-heart fa-1x ml-3 d-block"></i>-->
           <span class="before d-block">Panier{{panier.length}}</span></a>
       </li>
       <li>
