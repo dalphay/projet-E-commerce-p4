@@ -96,8 +96,8 @@
 
 .logo {
   font-family: 'hdoicons' !important;
-    speak: none;
-    font-size: 2rem;
+    // speak: none;
+    font-size: 4rem;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -109,11 +109,10 @@
 .slogan{
   position: relative;
   color: #fffdfd;
-  top: -21px;
-  margin-left: 51px;
+  top: -13px;
+  margin-left: 78px;
   font-size: 17px;
   font-family: 'hdoicons' !important;
-  
 }
 
 .fa, fa-cart-arrow-down, fa-1x {
@@ -187,7 +186,8 @@
   position: relative;
   float: right;
   list-style: none;
-  margin: 0;
+  margin: 8px;
+  font-size: 16px;
   display: flex;
   margin-top: -61px;
   font-family: 'hdoicons' !important;
