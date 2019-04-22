@@ -5,5 +5,4 @@ export interface Panier {
     articles: Produit,
     description: string,
     total:string,
-
 }

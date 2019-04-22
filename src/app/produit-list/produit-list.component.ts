@@ -22,15 +22,21 @@ export class ProduitListComponent implements OnInit {
   constructor(private service : ProduitService,private UserService:UserService, private panier : PanierService, private router : Router) { }
 
   ngOnInit() {
+    var $;
+
     this.service.getAllProduit().subscribe(value => {
       this.produits = value;
-      // console.log(value)
+      console.log(value)
     })
     if (this.UserService.user) {
       this.user = this.UserService.user
       console.log(this.user);
       
     }
+
+    $('.carousel').carousel({
+      interval: 2000
+    })
   }
 
   addProduitInPanier(produit) {
@@ -41,35 +47,5 @@ export class ProduitListComponent implements OnInit {
 
   goToFiche(id){
     this.router.navigate(["produit-fiche", id])
-
   }
-
-  public ngOnInitSlide(){
-
-      var $: any;
-
-      $(document).ready(function(){
-        $('.customer-logos').slick({
-            slidesToShow: 6,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 1500,
-            arrows: false,
-            dots: false,
-            pauseOnHover: false,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 4
-                }
-            }, {
-                breakpoint: 520,
-                settings: {
-                    slidesToShow: 3
-                }
-            }]
-        });
-    });
-  }
-
 }

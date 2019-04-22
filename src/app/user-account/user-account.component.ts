@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { EComStoreApiService } from '../services/e-com-store-api.service';
 
 @Component({
   selector: 'app-user-account',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class UserAccountComponent implements OnInit {
 
-  constructor(private service:UserService,private router : Router) { }
+  constructor(private service:EComStoreApiService, private router : Router) { }
   email:string;
   password:string;
   ngOnInit() {
@@ -24,10 +25,14 @@ export class UserAccountComponent implements OnInit {
     console.log(event);
   }
   submit() {
-    this.service.login(this.password,this.email).subscribe(value =>{
-      this.router.navigate(["user",value.body])
-      this.service.user = value.body;
-      console.log(value.body);
+    this.service.login({password:this.password,email:this.email}).subscribe(value =>{
+      console.log(value);
+      this.router.navigate(["user",value])
+      //this.service.user = value;
+      console.log(value);
+      this.service.getById(value['userId']).subscribe(value => {
+        console.log(value);
+      });
     })
   }
 }
