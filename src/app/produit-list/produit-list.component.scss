@@ -39,9 +39,10 @@
     color: white;
     font-size: 16px;
     border: 1px solid #4183d8;
-    box-shadow: 20px 40px 20px #f6f6f6;
-    padding: 2px 0px -1px;
-    margin: 52px 8px -47px;
+    box-shadow: 8px -40px 134px #f6f6f6;
+    padding: 0;
+    width: 83%;
+    margin: 53px 40px -44px;
 }
 
 .cursor {
@@ -74,12 +75,12 @@ a {
 
 
 
-/**slide logo clients
+/**slide logo clients*/
 h2{
   text-align:center;
   padding: 20px;
 }
-/** Slider 
+ 
 
 .slick-slide {
     margin: 0px 20px;
@@ -195,4 +196,3 @@ h2{
 .slick-arrow.slick-hidden {
     display: none;
 }
-*/

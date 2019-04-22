@@ -4,6 +4,8 @@ import { ProduitService } from '../services/produit.service';
 import { PanierService } from 'src/app/services/panier.service';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
+import { trigger, state, style, transition, animate } from '@angular/animations'; 
+// import * from 'jquery';
 
 
 
@@ -13,6 +15,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./produit-list.component.scss']
 })
 export class ProduitListComponent implements OnInit {
+  slide = 'Look jQuery Animation working in action!';
 
   produits : Produit[]
   user:Object = {};
@@ -41,29 +44,32 @@ export class ProduitListComponent implements OnInit {
 
   }
 
-  // slideShow(){
-  //   $(document).ready(function(){
-  //     $('.customer-logos').slick({
-  //         slidesToShow: 6,
-  //         slidesToScroll: 1,
-  //         autoplay: true,
-  //         autoplaySpeed: 1500,
-  //         arrows: false,
-  //         dots: false,
-  //         pauseOnHover: false,
-  //         responsive: [{
-  //             breakpoint: 768,
-  //             settings: {
-  //                 slidesToShow: 4
-  //             }
-  //         }, {
-  //             breakpoint: 520,
-  //             settings: {
-  //                 slidesToShow: 3
-  //             }
-  //         }]
-  //     });
-  // });
-  // }
+  public ngOnInitSlide(){
+
+      var $: any;
+
+      $(document).ready(function(){
+        $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
+  }
 
 }
